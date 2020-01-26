@@ -1,0 +1,36 @@
+\documentclass[12pt,letterpaper]{book}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage[top=2cm,bottom=2cm,left=3cm,right=2cm]{geometry}
+\usepackage{fancyhdr}   % Paquete para encabezados o pies de página.
+
+\usepackage{emptypage}  % Paquete para la prevensión de aparición 
+                        % de pies de página, encabezados y numeración.
+
+\usepackage{float}      % Paquete para la adecuación de cuadros y tablas.
+
+\usepackage{longtable}  % Paquete que permite la construcción de tablas
+                        % que abarque mas de una página.
+
+\usepackage{apacite}    % Paquete que ofrece el soporte de la citación 
+                        % estilo APA.
+                    
+\usepackage{blindtext}
+\usepackage{enumitem}   % opcional
+
+\usepackage{docstyle}
+
+\begin{document}
+    \include{caratula}
+    \frontmatter
+    \include{dedicatoria}
+    \include{agradecimientos}
+    \mainmatter     
+    \tableofcontents
+    \listoffigures
+    \listoftables
+    \include{cap_1}
+    \backmatter
+    \bibliographystyle{apacite}
+    \bibliography{bibliografia}
+\end{document}

@@ -1,0 +1,97 @@
+\chapter{Introducción}
+
+\begin{center}
+    \textit{En que consiste este capítulo}
+\end{center}
+
+\blindtext\\ % Relleno de texto
+
+\blindtext\\ % Relleno de texto
+
+Fringilla tristique neque. Sed interdum libero ut metus.
+Pellentesque placerat. Nam rutrum augue a leo. Morbi sed 
+elit sit amet ante.\\
+
+Duis fringilla tristique neque. Sed interdum libero ut metus.
+Pellentesque placerat. Nam rutrum augue a leo. Morbi sed 
+elit sit amet ante lobortis sollicitudin.Praesent blandit 
+blandit mauris. Praesent lectus tellus, aliquet aliquam,
+luctus a, egestas a, turpis.Mauris lacinia lorem sit amet
+ipsum. Nunc quis urna dictum turpis accumsan semper. Figura
+\ref{fig:ejemplo}.\\
+
+\begin{figure}[H]
+    \centering
+        \includegraphics[width=8cm]{img/figura_ejemplo.png}
+    \caption{Explicación de la figura (Aquí)}
+    Fuente: \textit{Libro Ejemplo} por \citeA[p.~5]{book:ejemplo_simple}
+    \label{fig:ejemplo}
+\end{figure}
+
+Stique neque. Sed interdum libero ut metus.
+Pellentesque placerat. Nam rutrum augue a leo. Morbi sed 
+elit sit amet ante lobortis sollicitudin.Praesent blandit 
+blandit mauris. Praesent lectus tellus, aliquet aliquam,
+luctus a, egestas a, turpis.Mauris lacinia lorem sit amet
+ipsum. Nunc quis urna dictum turpis accumsan semper. Cuadro
+\ref{cuadro:ejemplo}.\\
+
+\begin{table}[H]
+    \centering
+    \caption{Título del cuadro}
+    \vspace{0.5cm}
+    \label{cuadro:ejemplo}
+    \begin{tabular}{c|c|c|c|}
+        \cline{2-4}
+                                              & \textbf{Columna 1} & \textbf{Columna 2} & \textbf{Columna 3} \\ \hline
+        \multicolumn{1}{|c|}{\textbf{Fila 1}} & item               & item               & item               \\ \hline
+        \multicolumn{1}{|c|}{\textbf{Fila 2}} & item               & item               & item               \\ \hline
+        \multicolumn{1}{|c|}{\textbf{Fila 3}} & item               & item               & item               \\ \hline
+    \end{tabular}
+    \begin{center}
+        Nota. Cuadro extraído de \textit{Libro Ejemplo} por \citeA[p.~20]{book:ejemplo_simple}
+    \end{center}
+\end{table}
+
+\blindtext\\ % Relleno de texto
+
+Stique neque. Sed interdum libero ut metus.
+Pellentesque placerat. Nam rutrum augue a leo. Morbi sed 
+elit sit amet ante lobortis sollicitudin.Praesent blandit 
+blandit mauris. Praesent lectus tellus, aliquet aliquam,
+luctus a, egestas a, turpis.Mauris lacinia lorem sit amet
+ipsum. Nunc quis urna dictum turpis accumsan semper. Cuadro
+\ref{cuadro:cuadro_largo_ejemplo}.\\
+
+\begin{longtable}{p{2cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
+    \caption{Titulo de cuadro multipágina} \label{cuadro:cuadro_largo_ejemplo} \\
+    \cline{2-5}
+    \multicolumn{1}{l|}{} & \multicolumn{1}{c|}{\textbf{Columna 1}} & \multicolumn{1}{c|}{\textbf{Columna 2}} & \multicolumn{1}{c|}{\textbf{Columna 3}} & \multicolumn{1}{c|}{\textbf{Columna 4}}\\ \hline
+    \endfirsthead
+
+    \multicolumn{5}{c}{{\tablename{} \thetable{} -- Continuación de cuadro previo}} \\
+    \multicolumn{5}{l}{} \\
+    \cline{2-5}
+    \multicolumn{1}{l|}{} & \multicolumn{1}{c|}{\textbf{Columna 1}} & \multicolumn{1}{c|}{\textbf{Columna 2}} & \multicolumn{1}{c|}{\textbf{Columna 3}} & \multicolumn{1}{c|}{\textbf{Columna 4}}\\ \hline
+    \endhead
+
+    \multicolumn{5}{c}{{Continua en la siguiente página.}} \\
+    \endfoot
+
+    \multicolumn{5}{l}{} \\
+    \multicolumn{5}{l}{{Nota. Cuadro extraído de \textit{Libro Ejemplo} por \citeA[p.~20]{book:ejemplo_simple} }} \\
+    \endlastfoot
+
+    \multicolumn{1}{|c|}{\textbf{Fila 1}} & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. \\ \hline
+    \multicolumn{1}{|c|}{\textbf{Fila 2}} & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. \\ \hline
+    \multicolumn{1}{|c|}{\textbf{Fila 3}} & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. \\ \hline
+    \multicolumn{1}{|c|}{\textbf{Fila 4}} & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. \\ \hline
+    \multicolumn{1}{|c|}{\textbf{Fila 5}} & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. \\ \hline
+    \multicolumn{1}{|c|}{\textbf{Fila 6}} & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. \\ \hline  
+    \multicolumn{1}{|c|}{\textbf{Fila 7}} & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. \\ \hline    
+    \multicolumn{1}{|c|}{\textbf{Fila 8}} & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. \\ \hline    
+    \multicolumn{1}{|c|}{\textbf{Fila 9}} & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. \\ \hline    
+    \multicolumn{1}{|c|}{\textbf{Fila 10}} & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. \\ \hline    
+    \multicolumn{1}{|c|}{\textbf{Fila 11}} & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. \\ \hline    
+    \multicolumn{1}{|c|}{\textbf{Fila 12}} & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. \\ \hline    
+\end{longtable}
