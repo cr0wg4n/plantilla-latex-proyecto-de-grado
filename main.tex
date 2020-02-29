@@ -1,35 +1,44 @@
 \documentclass[12pt,letterpaper]{book}
-\usepackage[spanish]{babel}
+% Paquete para el soporte de imágenes
+\usepackage[spanish,es-tabla]{babel}
+% Paquete para la manipulación de imágenes.
 \usepackage{graphicx}
 \usepackage[top=2cm,bottom=2cm,left=3cm,right=2cm]{geometry}
-\usepackage{fancyhdr}   % Paquete para encabezados o pies de página.
+% Paquete para encabezados o pies de página.
+\usepackage{fancyhdr}   
 
-\usepackage{emptypage}  % Paquete para la prevensión de aparición 
+% Paquete para la prevensión de aparición 
                         % de pies de página, encabezados y numeración.
-
-\usepackage{float}      % Paquete para la adecuación de cuadros y tablas.
-
-\usepackage{longtable}  % Paquete que permite la construcción de tablas
-                        % que abarque mas de una página.
-
-\usepackage{apacite}    % Paquete que ofrece el soporte de la citación 
-                        % estilo APA.
-                    
+\usepackage{emptypage}  
+% Paquete para la adecuación de cuadros y tablas.
+\usepackage{float}      
+% Paquete que permite la construcción de tablas
+ % que abarque mas de una página.
+\usepackage{longtable}       
+% Paquete que ofrece el soporte de la citación 
+% estilo APA.
+\usepackage{apacite} 
 \usepackage{blindtext}
-\usepackage{enumitem}   % opcional
-
-\usepackage{docstyle}
+% \usepackage{enumitem}   % opcional
+\usepackage{configs/docstyle}
+% Paquetes para el uso de fórmulas matemáticas.
+\usepackage{amsmath, amsthm, amssymb}
+% \usepackage{caption}
 
 \begin{document}
+    \include{configs/conf}
     \include{caratula}
+    
     \frontmatter
-    \include{dedicatoria}
-    \include{agradecimientos}
+    \include{cap_0_dedicatoria}
+    \include{cap_0_agradecimientos}
+
     \mainmatter     
     \tableofcontents
     \listoffigures
     \listoftables
-    \include{cap_1}
+    \include{cap_1_ejemplos_de_uso}
+    
     \backmatter
     \bibliographystyle{apacite}
     \bibliography{bibliografia}

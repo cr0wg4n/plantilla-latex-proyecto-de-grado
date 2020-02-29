@@ -1,17 +1,95 @@
-\chapter{Introducción}
+\chapter{Recursos LaTeX}
 
 \begin{center}
-    \textit{En que consiste este capítulo}
+    \textit{En que consiste este capítulo (Aquí).}
 \end{center}
 
-\blindtext\\ % Relleno de texto
+\section{Fuente}
 
-\blindtext\\ % Relleno de texto
+\subsection{Familia}
+{\ttfamily typewriter (máquina de escribir)}
 
-Fringilla tristique neque. Sed interdum libero ut metus.
+{\sffamily sans serif}
+
+{\rmfamily roman}
+
+\subsection{Forma}
+\textbf{texto en negritas}\\
+\textit{texto en itálicas}\\
+\textsl{texto inclinado}\\
+\texttt{texto en estilo máquina de escribir}\\
+\textsc{texto en mayúsculas pequeñas}
+
+\subsection{Tamaño}
+{\tiny texto de prueba}\\
+{\scriptsize texto de prueba}\\
+{\footnotesize texto de prueba}\\
+{\small texto de prueba}\\
+{\normalsize texto de prueba}\\
+{\large texto de prueba}\\
+{\Large texto de prueba}\\
+{\LARGE texto de prueba}\\
+{\huge texto de prueba}\\
+{\Huge texto de prueba}
+
+\section{Listado}
+
+\subsection{No numerados}
+\begin{itemize}
+    \item Item 1
+    \item Item 2
+    \item Item 3
+\end{itemize}
+
+\subsection{Numerados}
+\begin{enumerate}
+    \item Item 1
+    \item Item 2
+    \item Item 3
+\end{enumerate}
+
+
+\section{Referenciación con APA}
+
+\subsection{Citación como parte de párrafo}
+
+\subsection*{Un autor}
+
+Como menciona \citeA{libro:ejemplo}, no es la única
+forma de citar.\\
+
+\subsection*{Varios autores}
+
+Como menciona \citeA{libro:ejemplo_varios_autores}, no es la única
+forma de citar.\\
+
+\subsection{Citación en la parte final}
+
+\subsection*{Un autor}
+
+Duis fringilla tristique neque. Sed interdum libero ut metus.
 Pellentesque placerat. Nam rutrum augue a leo. Morbi sed 
-elit sit amet ante.\\
+elit sit amet ante lobortis sollicitudin.Praesent blandit 
+blandit mauris citumoris totalis. \cite{libro:ejemplo}.
 
+\subsection*{Varios autores}
+
+Duis fringilla tristique neque. Sed interdum libero ut metus.
+Pellentesque placerat. Nam rutrum augue a leo. Morbi sed 
+elit sit amet ante lobortis sollicitudin.Praesent blandit 
+blandit mauris citumoris totalis. \cite{libro:ejemplo_varios_autores}.
+
+\subsection{Citación con número de página}
+
+Como menciona \citeA[p.~5]{libro:ejemplo}, no es la única
+forma de citar.\\
+
+Duis fringilla tristique neque. Sed interdum libero ut metus.
+Pellentesque placerat. Nam rutrum augue a leo. Morbi sed 
+elit sit amet ante lobortis sollicitudin.Praesent blandit 
+blandit mauris citumoris totalis. \cite[p.~7-12]{libro:ejemplo_varios_autores}.
+
+\section{Figuras}
 Duis fringilla tristique neque. Sed interdum libero ut metus.
 Pellentesque placerat. Nam rutrum augue a leo. Morbi sed 
 elit sit amet ante lobortis sollicitudin.Praesent blandit 
@@ -21,55 +99,58 @@ ipsum. Nunc quis urna dictum turpis accumsan semper. Figura
 \ref{fig:ejemplo}.\\
 
 \begin{figure}[H]
-    \centering
+    \begin{center}
         \includegraphics[width=8cm]{img/figura_ejemplo.png}
+    \end{center}
     \caption{Explicación de la figura (Aquí)}
-    Fuente: \textit{Libro Ejemplo} por \citeA[p.~5]{book:ejemplo_simple}
+    Fuente: Adaptada de Apellido, N. (2000) \textit{Nombre del libro}.
+    Editorial o universidad que lo publicó.
     \label{fig:ejemplo}
 \end{figure}
 
+\section{Tablas}
+
+\subsection{Corto}
 Stique neque. Sed interdum libero ut metus.
 Pellentesque placerat. Nam rutrum augue a leo. Morbi sed 
 elit sit amet ante lobortis sollicitudin.Praesent blandit 
 blandit mauris. Praesent lectus tellus, aliquet aliquam,
 luctus a, egestas a, turpis.Mauris lacinia lorem sit amet
-ipsum. Nunc quis urna dictum turpis accumsan semper. Cuadro
-\ref{cuadro:ejemplo}.\\
+ipsum. Nunc quis urna dictum turpis accumsan semper. Tabla
+\ref{tabla:ejemplo}.\\
 
 \begin{table}[H]
-    \centering
-    \caption{Título del cuadro}
-    \vspace{0.5cm}
-    \label{cuadro:ejemplo}
-    \begin{tabular}{c|c|c|c|}
-        \cline{2-4}
-                                              & \textbf{Columna 1} & \textbf{Columna 2} & \textbf{Columna 3} \\ \hline
-        \multicolumn{1}{|c|}{\textbf{Fila 1}} & item               & item               & item               \\ \hline
-        \multicolumn{1}{|c|}{\textbf{Fila 2}} & item               & item               & item               \\ \hline
-        \multicolumn{1}{|c|}{\textbf{Fila 3}} & item               & item               & item               \\ \hline
-    \end{tabular}
+    \caption{Título de la tabla}
+    \label{tabla:ejemplo}
     \begin{center}
-        Nota. Cuadro extraído de \textit{Libro Ejemplo} por \citeA[p.~20]{book:ejemplo_simple}
+        \begin{tabular}{c|c|c|c|}
+            \cline{2-4}
+            & \textbf{Columna 1} & \textbf{Columna 2} & \textbf{Columna 3} \\ \hline
+            \multicolumn{1}{|c|}{\textbf{Fila 1}} & item               & item               & item               \\ \hline
+            \multicolumn{1}{|c|}{\textbf{Fila 2}} & item               & item               & item               \\ \hline
+            \multicolumn{1}{|c|}{\textbf{Fila 3}} & item               & item               & item               \\ \hline
+        \end{tabular}
     \end{center}
+    Nota. Extraída de Apellido, N. (2000) \textit{Nombre del libro}.
+    Editorial o universidad que lo publicó.
 \end{table}
 
-\blindtext\\ % Relleno de texto
-
+\subsection{Multipágina}
 Stique neque. Sed interdum libero ut metus.
 Pellentesque placerat. Nam rutrum augue a leo. Morbi sed 
 elit sit amet ante lobortis sollicitudin.Praesent blandit 
 blandit mauris. Praesent lectus tellus, aliquet aliquam,
 luctus a, egestas a, turpis.Mauris lacinia lorem sit amet
-ipsum. Nunc quis urna dictum turpis accumsan semper. Cuadro
-\ref{cuadro:cuadro_largo_ejemplo}.\\
+ipsum. Nunc quis urna dictum turpis accumsan semper. Tabla
+\ref{tabla:tabla_largo_ejemplo}.\\
 
 \begin{longtable}{p{2cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
-    \caption{Titulo de cuadro multipágina} \label{cuadro:cuadro_largo_ejemplo} \\
+    \caption{Titulo de tabla multipágina} \label{tabla:tabla_largo_ejemplo} \\
     \cline{2-5}
     \multicolumn{1}{l|}{} & \multicolumn{1}{c|}{\textbf{Columna 1}} & \multicolumn{1}{c|}{\textbf{Columna 2}} & \multicolumn{1}{c|}{\textbf{Columna 3}} & \multicolumn{1}{c|}{\textbf{Columna 4}}\\ \hline
     \endfirsthead
 
-    \multicolumn{5}{c}{{\tablename{} \thetable{} -- Continuación de cuadro previo}} \\
+    \multicolumn{5}{c}{{\tablename{} \thetable{} -- Continuación de tabla previa}} \\
     \multicolumn{5}{l}{} \\
     \cline{2-5}
     \multicolumn{1}{l|}{} & \multicolumn{1}{c|}{\textbf{Columna 1}} & \multicolumn{1}{c|}{\textbf{Columna 2}} & \multicolumn{1}{c|}{\textbf{Columna 3}} & \multicolumn{1}{c|}{\textbf{Columna 4}}\\ \hline
@@ -79,7 +160,7 @@ ipsum. Nunc quis urna dictum turpis accumsan semper. Cuadro
     \endfoot
 
     \multicolumn{5}{l}{} \\
-    \multicolumn{5}{l}{{Nota. Cuadro extraído de \textit{Libro Ejemplo} por \citeA[p.~20]{book:ejemplo_simple} }} \\
+    \multicolumn{5}{l}{Nota. Extraída de Apellido, N. (2000) \textit{Nombre del libro}. Editorial o universidad que lo publicó.} \\
     \endlastfoot
 
     \multicolumn{1}{|c|}{\textbf{Fila 1}} & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. \\ \hline
@@ -95,3 +176,54 @@ ipsum. Nunc quis urna dictum turpis accumsan semper. Cuadro
     \multicolumn{1}{|c|}{\textbf{Fila 11}} & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. \\ \hline    
     \multicolumn{1}{|c|}{\textbf{Fila 12}} & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. & Lorem ipsum dolor sit amet, consectetuer adipiscing elit. \\ \hline    
 \end{longtable}
+
+\section{Fórmulas matemáticas}
+
+\section*{Simple}
+\begin{equation}
+    e^{i\pi} + 1 = 0
+    \label{eq:euler}
+\end{equation}
+
+\section*{Matrices}
+\begin{equation}
+    \left[
+    \begin{matrix}
+     a & b & c \\
+     d & e & f \\
+     g & h & i
+    \end{matrix}
+    \right]
+    \label{eq:matriz}
+\end{equation}
+
+\section*{Límites}
+\begin{equation}
+    \lim_{x\rightarrow\infty}\frac{3+x}{x^2} 
+    \label{eq:limites}
+\end{equation}
+
+%%demo
+
+\begin{equation}
+    e^{i\pi} + 1 = 0
+    \label{eq:euler}
+\end{equation}
+
+\begin{equation}
+    \left[
+    \begin{matrix}
+     a & b & c \\
+     d & e & f \\
+     g & h & i
+    \end{matrix}
+    \right]
+    \label{eq:matriz}
+\end{equation}
+
+\begin{equation}
+    \lim_{x\rightarrow\infty}\frac{3+x}{x^2}
+    \label{eq:limites}
+\end{equation}
+
+\cite{blog:ejemplo}
