@@ -1,29 +1,26 @@
 \ProvidesPackage{docstyle}
 
-\newcommand\nombreAutor{Nombre del Autor (Aquí)}
-\newcommand\nombreProyecto{Nombre del proyecto de grado (Aquí)}
-\newcommand\nombreTutor{Nombre del tutor (Aquí)}
-\newcommand\nombreCiudadPais{departamento - pais}
-\newcommand\fecha{Mes Año}
-\newcommand\nombreUniversidad{nombre de la universidad (Aquí)}
-\newcommand\nombreFacultad{nombre de la facultad (Aquí)}
-\newcommand\nombreCarrera{nombre de la carrera (Aquí)}
+\newcommand\nombreAutor{(Nombre del Autor)}
+\newcommand\nombreProyecto{(Nombre del proyecto de grado)}
+\newcommand\nombreTutor{(Nombre del tutor)}
+\newcommand\nombreCiudadPais{(departamento - pais)}
+\newcommand\fecha{(Mes Año)}
+\newcommand\nombreUniversidad{(Nombre de la universidad)}
+\newcommand\nombreFacultad{(Nombre de la facultad)}
+\newcommand\nombreCarrera{(Nombre de la carrera)}
 \newcommand\descripcion{Proyecto de Grado Presentado para optar
-a la mención que se desea (Aquí)}
+a (la mención que se desea)}
 
 
+% Configuraciones Necesarias
 \renewcommand{\familydefault}{\sfdefault}
-
 \setlength\bibitemsep{3\itemsep} 
-
-
 \setlength{\parindent}{0cm}
+
 \pagestyle{fancy}
 \fancyhf{}
-
 \lhead{
 \scriptsize\textbf{\nombreProyecto}\\
 \nombreAutor
 }
-
 \cfoot{\thepage}
