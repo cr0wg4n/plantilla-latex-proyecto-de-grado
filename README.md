@@ -5,10 +5,10 @@ proyectos de grado bajo normas APA.
 ## Estructura
 
 Las capertas mas importantes y su uso son:
-- ```configs```, carpeta con las configuraciones de la plantilla y para la introducción de datos personales.
-- ```capitulos```, carpeta contenedora de los capitulos que se vaya desarrollando.
-- ```anexos```, carpeta contenedora de los anexos que se vaya desarrollando.
-- ```img```, carpeta contenedora de las imagenes que se vaya a utilizar.
+- ```configs``` carpeta con las configuraciones de la plantilla y para la introducción de datos personales.
+- ```capitulos``` carpeta contenedora de los capitulos que se vaya desarrollando.
+- ```anexos``` carpeta contenedora de los anexos que se vaya desarrollando.
+- ```img``` carpeta contenedora de las imagenes que se vaya a utilizar.
 
 ## Uso 
 
