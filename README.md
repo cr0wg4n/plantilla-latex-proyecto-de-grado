@@ -1,14 +1,15 @@
-# Plantilla en LaTeX para Proyecto de Grado con Normas APA
-Esta es una plantilla de libre uso para la documentación de 
+# Plantilla LaTeX para Proyecto de Grado (Normas APA)
+
+Plantilla de libre uso para la documentación de 
 proyectos de grado bajo normas APA.
 
 ## Estructura
 
-Las capertas mas importantes y su uso son:
-- ```configs``` carpeta con las configuraciones de la plantilla, en el archivo ```dockstyle.sty``` se realiza la introducción de datos personales para la personalización de la plantilla.
-- ```capitulos``` carpeta contenedora de los capitulos que se vaya desarrollando.
-- ```anexos``` carpeta contenedora de los anexos que se vaya desarrollando.
-- ```img``` carpeta contenedora de las imagenes que se vaya a utilizar.
+Los directorios mas importantes son:
+- ```configs```, directorio de las configuraciones de la plantilla. En el archivo ```dockstyle.sty``` se realiza la introducción de datos personales para la personalización de la plantilla.
+- ```capitulos```, directorio contenedor de los capítulos del documento.
+- ```anexos```, directorio contenedor de los anexos del documento.
+- ```img```, directorio contenedor de las imagenes del documento, es recomendable manejarlos en directorios distintos por capítulos.
 
 ## Uso 
 
