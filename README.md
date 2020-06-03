@@ -18,6 +18,8 @@ de LaTeX.
 
 El archivo ```.latexmkrc``` introduce un flag o argumento denominado ```--shell-escape``` que permite externalizar la composición tipográfica, en este caso permite trabajar al paquete tikz entre otros, que comúnmente se usan para graficación o renderización de imagenes.
 
+La compilación debe ser a través de ```pdflatex``` (la mayoria de los editores lo tienen por defecto).
+
 Esta plantilla fue elaborada en [Visual Studio Code](https://code.visualstudio.com/) con la extensión [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop), otra alternativa es [Texmaker](https://www.xm1math.net/texmaker/).
 
 Acá un [tutorial](https://medium.com/@cr0wg4n/latex-y-visual-studio-code-gu%C3%ADa-de-instalaci%C3%B3n-ca8bef3935e3) para correr LaTeX en Visual Studio Code.
