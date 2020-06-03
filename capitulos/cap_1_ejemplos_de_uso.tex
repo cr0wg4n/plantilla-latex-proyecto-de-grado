@@ -89,8 +89,9 @@ Pellentesque placerat. Nam rutrum augue a leo. Morbi sed
 elit sit amet ante lobortis sollicitudin.Praesent blandit 
 blandit mauris citumoris totalis. \cite[p.~7-12]{libro:ejemplo_varios_autores}.
 
-\subsection{Citación Anexos}
-Citación ()
+\subsection{Citación anexos}
+Duis fringilla tristique neque. Sed interdum libero ut metus.
+Pellentesque placerat (Ver Anexo A).
 
 \section{Figuras}
 Referenciando a la figura \ref{fig:ejemplo}.
@@ -193,3 +194,34 @@ ipsum. Nunc quis urna dictum turpis accumsan semper. Tabla
     \lim_{x\rightarrow\infty}\frac{3+x}{x^2} 
     \label{eq:limites}
 \end{equation}
+
+\section{Diagramas de flujo}
+
+\begin{center}
+    \begin{tikzpicture}[node distance = 3cm, auto]
+        \footnotesize
+        % Nodos
+        \node [block] (init) {Inicio};
+        \node [block, below of=init] (test) {Nodo A};
+        \node [block, right of=test] (search) {Nodo B};
+        \node [decision, below of=test] (test_done) {Decisión A};
+        \node [block, below of=test_done] (intregate) {Nodo C};
+        \node [cloud, left of=intregate] (code) {Extra};
+        \node [decision, below of=intregate] (all_done) {Decisión B};
+        \node [block, below of=all_done] (stop) {Nodo D};
+        % Cordenadas
+        \coordinate[left of=test] (il);
+        \coordinate[left of=all_done] (al);
+        % Líneas
+        \path [line, dashed] (code) -- (intregate);
+        \path [line, dashed] (test_done) -| node [near start] {si} (code);
+        \path [line] (init) -- (test);
+        \path [line] (test) -- (test_done);
+        \path [line] (test_done) -- node {si}(intregate);
+        \path [line] (test_done) -| node  [near start] {no} (search);
+        \path [line] (intregate) -- (all_done);
+        \path [line] (all_done.west) |- node [near end] {no} ([xshift=-2.3cm]al) -- ([xshift=-2.3cm]il)-- (test.west);
+        \path [line] (all_done) -- node {si} (stop);
+        \path [line] (search) -- (test);
+    \end{tikzpicture}
+\end{center}
