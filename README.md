@@ -26,7 +26,7 @@ Acá un [tutorial](https://medium.com/@cr0wg4n/latex-y-visual-studio-code-gu%C3%
 
 ## Ejemplo
 
-El documento ```.pdf``` resultado de la compilación del proyecto es [main.pdf](https://github.com/cr0wg4n/plantilla-latex-proyecto-de-grado/blob/master/build/main.pdf).
+El documento ```.pdf``` resultado de la compilación es [main.pdf](https://github.com/cr0wg4n/plantilla-latex-proyecto-de-grado/blob/master/build/main.pdf) y normalmente se encuentra en el directorio build.
 
 ## Vista Previa 
 
