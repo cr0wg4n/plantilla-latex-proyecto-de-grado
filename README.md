@@ -3,6 +3,8 @@
 Plantilla de libre uso para la documentación de 
 proyectos de grado bajo normas APA.
 
+[Enlace](https://medium.com/@cr0wg4n/documenta-tu-proyecto-de-grado-con-latex-sin-morir-en-el-intento-ft-normas-apa-15bf50a2ee01) al artículo de este repositorio.
+
 ## Estructura
 
 Los directorios mas importantes son:
