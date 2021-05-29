@@ -3,7 +3,7 @@
 Plantilla de libre uso para la documentación de 
 proyectos de grado bajo normas APA.
 
-[Enlace](https://medium.com/@cr0wg4n/documenta-tu-proyecto-de-grado-con-latex-sin-morir-en-el-intento-ft-normas-apa-15bf50a2ee01) al artículo de este repositorio.
+[Enlace](https://cr0wg4n.medium.com/documenta-tu-proyecto-de-grado-con-latex-sin-morir-en-el-intento-ft-normas-apa-15bf50a2ee01) al artículo de este repositorio.
 
 ## Estructura
 
@@ -24,7 +24,7 @@ La compilación debe ser a través de ```pdflatex``` (la mayoria de los editores
 
 Esta plantilla fue elaborada en [Visual Studio Code](https://code.visualstudio.com/) con la extensión [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop), otra alternativa es [Texmaker](https://www.xm1math.net/texmaker/).
 
-Acá un [tutorial](https://medium.com/@cr0wg4n/latex-y-visual-studio-code-gu%C3%ADa-de-instalaci%C3%B3n-ca8bef3935e3) para correr LaTeX en Visual Studio Code.
+Acá un [tutorial](https://cr0wg4n.medium.com/latex-y-visual-studio-code-gu%C3%ADa-de-instalaci%C3%B3n-ca8bef3935e3) para correr LaTeX en Visual Studio Code.
 
 ## Ejemplo
 
