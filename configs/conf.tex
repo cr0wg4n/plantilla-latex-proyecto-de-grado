@@ -102,3 +102,12 @@
 }
 \BeforeBeginEnvironment{code}{\vspace{2mm}}
 % \AfterEndEnvironment{code}{\vspace{0.5mm}}
+
+
+% Espacios entre autores en "Bibliografia"
+\let\OLDthebibliography\thebibliography
+\renewcommand\thebibliography[1]{
+  \OLDthebibliography{#1}
+  \setlength{\parskip}{3mm}
+  \setlength{\itemsep}{3mm plus 0.3ex}
+}
