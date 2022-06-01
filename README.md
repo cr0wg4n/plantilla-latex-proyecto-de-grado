@@ -36,3 +36,14 @@ El documento ```.pdf``` resultado de la compilación es [main.pdf](https://githu
 ## Vista Previa 
 
 ![](https://github.com/cr0wg4n/plantilla-latex-proyecto-de-grado/blob/master/img/preview.png)
+
+## Reducción de tamaño de archivo pdf
+
+En muchas ocasiones el peso del archivo logra alcanzar un gran tamaño, para ello puedes correr el siguiente comando, pero antes necesitas 
+instalar [ghostscript](https://www.ghostscript.com/), te aconsejo correr el comando en una terminal con bash:
+
+```bash
+gswin64c -sDEVICE=pdfwrite -dDownsampleColorImages=true -dDownsampleGrayImages=true -dDownsampleMonoImages=true -dColorImageResolution=300 -dGrayImageResolution=300 -dMonoImageResolution=300 -dColorImageDownsampleThreshold=1.0 -dGrayImageDownsampleThreshold=1.0 -dMonoImageDownsampleThreshold=1.0 -dCompatibilityLevel=1.4 -dNOPAUSE -dQUIET -dBATCH -sOutputFile=build/main-compressed.pdf build/main.pdf
+```
+
+Para lograr mejores o peores resultado puedes ajustar el valor de los parámetros (`dColorImageResolution`, `dGrayImageResolution`, `dMonoImageResolution`), estos parámetros tienen que ver con la calidad en la que se procesaran las imágenes internas, LaTeX suele conservar la mejor calidad, pero modificando estos parámetros es posible cambiar la resolución de las imágenes logrando un menor tamaño en el peso del archivo pdf final.
