@@ -4,22 +4,23 @@ Plantilla de libre uso para la documentación de
 proyectos de grado bajo normas APA.
 
 ## Enlaces Importantes
-* [Post especial sobre este repositorio](https://cr0wg4n.medium.com/documenta-tu-proyecto-de-grado-con-latex-sin-morir-en-el-intento-ft-normas-apa-15bf50a2ee01)
 * [Diapositivas "Taller de LaTeX 2022"](https://slides.com/cr0wg4n/taller-de-latex/edit)
+* [Post especial sobre este repositorio](https://cr0wg4n.medium.com/documenta-tu-proyecto-de-grado-con-latex-sin-morir-en-el-intento-ft-normas-apa-15bf50a2ee01)
 
 ## Requerimientos
-
+        ⚠️ Es importante tener instalados todos los requerimientos
 * Python 3 o mayor
 * Pygments (paquete en pip). Ejemplo de instalación: `pip install Pygments` o `pip3 install Pygments` 
 * Preparar el ambiente ([tutorial](https://cr0wg4n.medium.com/latex-y-visual-studio-code-gu%C3%ADa-de-instalaci%C3%B3n-ca8bef3935e3)).
 
-## Estructura
+## Estructura de archivos
 
 Los directorios mas importantes son:
 - ```configs```, directorio de las configuraciones de la plantilla. En el archivo ```dockstyle.sty``` se realiza la introducción de datos personales para la personalización de la plantilla.
 - ```capitulos```, directorio contenedor de los capítulos del documento.
 - ```anexos```, directorio contenedor de los anexos del documento.
 - ```img```, directorio contenedor de las imagenes del documento, es recomendable manejarlos en directorios distintos por capítulos.
+- ```codigo```, directorio para adjuntar archivos de código en texto plano.
 
 ## Uso 
 

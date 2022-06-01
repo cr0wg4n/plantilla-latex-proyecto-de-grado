@@ -285,9 +285,9 @@ void i2c_read(uint8_t main_address, uint8_t address, uint8_t *buffer, size_t siz
     \end{minted}
 \end{listing}
 
-\subsection{Código que pasa de una plana}
+\subsection{Código que excede una plana}
 
-Para código enormes usa el environment ``code'', ejemplo de código \ref{code:request_partial}.
+Para código enormes usa este ejemplo de código \ref{code:request_partial}.
 \begin{code}
     \begin{minted}[bgcolor=gray_background, xleftmargin=10pt, linenos=true, breaklines, breakanywhere, fontsize=\footnotesize]{python}
 """
@@ -484,14 +484,16 @@ def super_len(o):
     \label{code:request_partial}
 \end{code}
 
-Otra linea más.
+Ten mucho cuidado, en ocasiones caracteres especiales como tildes,
+asteriscos, arrobas y demás se ven en la imposibilidad de no 
+compilarse.
 
 \subsection{Código desde un archivo externo}
 
 Ejemplo de minted a través de un archivo de código externo, código \ref{code:demo_py}.
 
 \begin{code}
-    \inputminted[bgcolor=gray_background, xleftmargin=10pt, linenos=true, breaklines, fontsize=\footnotesize]{python}{code/capitulo_1/demo.py}
+    \inputminted[bgcolor=gray_background, xleftmargin=10pt, linenos=true, breaklines, fontsize=\footnotesize]{python}{codigo/capitulo_1/demo.py}
     \caption{Este es un ejemplo de hola mundo en Python.}
     \label{code:demo_py}
 \end{code}
