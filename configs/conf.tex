@@ -4,7 +4,7 @@
 \renewcommand{\BRetrieved}[1]{}
 
 % Anexos Letras
-\renewcommand{\appendixname}{Anexos}
+\renewcommand{\appendixname}{Anexo}
 \renewcommand{\appendixtocname}{Anexos}
 \renewcommand{\appendixpagename}{Anexos}
 
@@ -14,6 +14,9 @@
 
 % References renombrado
 \renewcommand{\bibname}{Bibliografía}
+
+\renewcommand{\listoflistingscaption}{Índice de Códigos}
+\renewcommand{\listingscaption}{\sffamily{Código}}
 
 % Configuración de las formas en la graficación de diagramas de flujo
 \tikzstyle{decision} = [diamond, draw, fill=blue!15, 
@@ -46,9 +49,12 @@
 \titlespacing*{\paragraph}
 {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 
+% Definiendo colores y estilos para minted
+% otros estilos: manni, rrt, perldoc, colorful, borland, murphy, vs, trac
+\usemintedstyle{tango}
+\definecolor{gray_background}{gray}{0.92}
 
 % Para agregar Bookmarks de imágenes y tablas
-
 \makeatletter
   \newcommand{\listoffiguresbookmarks}{%
     \pdfbookmark[0]{\listfigurename}{listoffiguresbookmark}
@@ -88,3 +94,11 @@
   \listoffiguresbookmarks
   \listoftablesbookmarks
 }
+
+
+% Environment para código largos 
+\newenvironment{code}{\captionsetup{type=listing}}{
+    {}    
+}
+\BeforeBeginEnvironment{code}{\vspace{2mm}}
+% \AfterEndEnvironment{code}{\vspace{0.5mm}}

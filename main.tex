@@ -71,6 +71,17 @@
 % Paquete para la configuración de listas
 \usepackage{enumitem}
 
+% Paquete para la inclusión de código con highlighting
+% es importante un "outputdir" ya que minted también genera 
+% archivos
+\usepackage[outputdir=build, chapter]{minted}
+
+% Paquete para modificar el comportamiento de los listings
+\usepackage{listings}
+
+% Paquete para el manejo de colores
+\usepackage{xcolor}
+
 % Paquete "custom" para la incrustación de datos personales
 \usepackage{configs/docstyle}
 
@@ -84,6 +95,7 @@
         \tableofcontents
         \listoffigures
         \listoftables
+        \listoflistings
     
     \mainmatter
         \include{capitulos/cap_1_ejemplos_de_uso}

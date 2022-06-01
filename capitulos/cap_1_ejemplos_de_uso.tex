@@ -258,3 +258,243 @@ Mi calle tiene \ang{10} de diferencia con otra.
 
 Para más unidades consultar la documentación del paquete 
 \textbf{siunitx}.
+
+\section{Código}
+Ejemplo de referencia y uso de \ref{code:hello_world}.
+
+\subsection{Código corto}
+Para código corto puedes emplear a minted como un listing, código \ref{code:example_i2c}.
+para cambiar el fondo o retiralo basta con ver la opción ``bgcolor''.
+
+\begin{listing}[H]
+    \caption{Función genérica de lectura I2C con ``Wire.h''.}
+    \label{code:example_i2c}
+    \begin{minted}[bgcolor=gray_background, xleftmargin=10pt, linenos=true, breaklines, breakanywhere, fontsize=\footnotesize]{cpp}
+void i2c_read(uint8_t main_address, uint8_t address, uint8_t *buffer, size_t size) {
+    Wire.beginTransmission(main_address);
+    Wire.write(address);
+    Wire.endTransmission();
+    uint8_t segments = Wire.requestFrom(main_address, size);
+    if (segments == (uint8_t) size) {
+        for (uint8_t i = 0; i < size; i++)
+        {
+        buffer[i] = Wire.read();
+        }  
+    }
+}
+    \end{minted}
+\end{listing}
+
+\subsection{Código que pasa de una plana}
+
+Para código enormes usa el environment ``code'', ejemplo de código \ref{code:request_partial}.
+\begin{code}
+    \begin{minted}[bgcolor=gray_background, xleftmargin=10pt, linenos=true, breaklines, breakanywhere, fontsize=\footnotesize]{python}
+"""
+requests.utils
+~~~~~~~~~~~~~~
+This module provides utility functions that are used within Requests
+that are also useful for external consumption.
+"""
+
+import codecs
+import contextlib
+import io
+import os
+import re
+import socket
+import struct
+import sys
+import tempfile
+import warnings
+import zipfile
+from collections import OrderedDict
+
+from urllib3.util import make_headers, parse_url
+
+from . import certs
+from .__version__ import __version__
+
+# to_native_string is unused here, but imported here for backwards compatibility
+from ._internal_utils import to_native_string  # noqa: F401
+from .compat import (
+    Mapping,
+    basestring,
+    bytes,
+    getproxies,
+    getproxies_environment,
+    integer_types,
+)
+from .compat import parse_http_list as _parse_list_header
+from .compat import (
+    proxy_bypass,
+    proxy_bypass_environment,
+    quote,
+    str,
+    unquote,
+    urlparse,
+    urlunparse,
+)
+from .cookies import cookiejar_from_dict
+from .exceptions import (
+    FileModeWarning,
+    InvalidHeader,
+    InvalidURL,
+    UnrewindableBodyError,
+)
+from .structures import CaseInsensitiveDict
+
+NETRC_FILES = (".netrc", "_netrc")
+
+DEFAULT_CA_BUNDLE_PATH = certs.where()
+
+DEFAULT_PORTS = {"http": 80, "https": 443}
+
+# Ensure that ', ' is used to preserve previous delimiter behavior.
+DEFAULT_ACCEPT_ENCODING = ", ".join(
+    re.split(r",\s*", make_headers(accept_encoding=True)["accept-encoding"])
+)
+
+
+if sys.platform == "win32":
+    # provide a proxy_bypass version on Windows without DNS lookups
+
+    def proxy_bypass_registry(host):
+        try:
+            import winreg
+        except ImportError:
+            return False
+
+        try:
+            internetSettings = winreg.OpenKey(
+                winreg.HKEY_CURRENT_USER,
+                r"Software\Microsoft\Windows\CurrentVersion\Internet Settings",
+            )
+            # ProxyEnable could be REG_SZ or REG_DWORD, normalizing it
+            proxyEnable = int(winreg.QueryValueEx(internetSettings, "ProxyEnable")[0])
+            # ProxyOverride is almost always a string
+            proxyOverride = winreg.QueryValueEx(internetSettings, "ProxyOverride")[0]
+        except OSError:
+            return False
+        if not proxyEnable or not proxyOverride:
+            return False
+
+        # make a check value list from the registry entry: replace the
+        # '<local>' string by the localhost entry and the corresponding
+        # canonical entry.
+        proxyOverride = proxyOverride.split(";")
+        # now check if we match one of the registry values.
+        for test in proxyOverride:
+            if test == "<local>":
+                if "." not in host:
+                    return True
+            test = test.replace(".", r"\.")  # mask dots
+            test = test.replace("*", r".*")  # change glob sequence
+            test = test.replace("?", r".")  # change glob char
+            if re.match(test, host, re.I):
+                return True
+        return False
+
+    def proxy_bypass(host):  # noqa
+        """Return True, if the host should be bypassed.
+        Checks proxy settings gathered from the environment, if specified,
+        or the registry.
+        """
+        if getproxies_environment():
+            return proxy_bypass_environment(host)
+        else:
+            return proxy_bypass_registry(host)
+
+
+def dict_to_sequence(d):
+    """Returns an internal sequence dictionary update."""
+
+    if hasattr(d, "items"):
+        d = d.items()
+
+    return d
+
+
+def super_len(o):
+    total_length = None
+    current_position = 0
+
+    if hasattr(o, "__len__"):
+        total_length = len(o)
+
+    elif hasattr(o, "len"):
+        total_length = o.len
+
+    elif hasattr(o, "fileno"):
+        try:
+            fileno = o.fileno()
+        except (io.UnsupportedOperation, AttributeError):
+            # AttributeError is a surprising exception, seeing as how we've just checked
+            # that `hasattr(o, 'fileno')`.  It happens for objects obtained via
+            # `Tarfile.extractfile()`, per issue 5229.
+            pass
+        else:
+            total_length = os.fstat(fileno).st_size
+
+            # Having used fstat to determine the file length, we need to
+            # confirm that this file was opened up in binary mode.
+            if "b" not in o.mode:
+                warnings.warn(
+                    (
+                        "Requests has determined the content-length for this "
+                        "request using the binary size of the file: however, the "
+                        "file has been opened in text mode (i.e. without the 'b' "
+                        "flag in the mode). This may lead to an incorrect "
+                        "content-length. In Requests 3.0, support will be removed "
+                        "for files in text mode."
+                    ),
+                    FileModeWarning,
+                )
+
+    if hasattr(o, "tell"):
+        try:
+            current_position = o.tell()
+        except OSError:
+            # This can happen in some weird situations, such as when the file
+            # is actually a special file descriptor like stdin. In this
+            # instance, we don't know what the length is, so set it to zero and
+            # let requests chunk it instead.
+            if total_length is not None:
+                current_position = total_length
+        else:
+            if hasattr(o, "seek") and total_length is None:
+                # StringIO and BytesIO have seek but no usable fileno
+                try:
+                    # seek to end of file
+                    o.seek(0, 2)
+                    total_length = o.tell()
+
+                    # seek back to current position to support
+                    # partially read file-like objects
+                    o.seek(current_position or 0)
+                except OSError:
+                    total_length = 0
+
+    if total_length is None:
+        total_length = 0
+
+    return max(0, total_length - current_position)
+    \end{minted}
+    \caption{Este es un ejemplo de hola mundo en Python.}
+    \label{code:request_partial}
+\end{code}
+
+Otra linea más.
+
+\subsection{Código desde un archivo externo}
+
+Ejemplo de minted a través de un archivo de código externo, código \ref{code:demo_py}.
+
+\begin{code}
+    \inputminted[bgcolor=gray_background, xleftmargin=10pt, linenos=true, breaklines, fontsize=\footnotesize]{python}{code/capitulo_1/demo.py}
+    \caption{Este es un ejemplo de hola mundo en Python.}
+    \label{code:demo_py}
+\end{code}
+
+Tu código debe ir en la carpeta ``code'', puedes separarlo 
+por capitulos en subcarpetas para mayor orden.
