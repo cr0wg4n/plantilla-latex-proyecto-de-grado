@@ -2,35 +2,67 @@
 
 % Clase de Documento, formato libro
 \documentclass[12pt,letterpaper]{book}
+
 % Paquete para el soporte de idiomas
 \usepackage[spanish,es-tabla]{babel}
+
 % Paquete para la manipulación de imágenes.
 \usepackage{graphicx}
+
 % Paquete para la referencias links y marcadores en el menu del pdf
 \usepackage{hyperref}
+
 % Márgenes de la hoja
 \usepackage[top=2cm,bottom=2cm,left=3cm,right=2cm]{geometry}
+
 % Paquete para encabezados o pies de página.
-\usepackage{fancyhdr}   
+\usepackage{fancyhdr}
+
 % Paquete para la prevensión de aparición 
 % de pies de página, encabezados y numeración.
-\usepackage{emptypage}  
+\usepackage{emptypage}
+
 % Paquete para la adecuación de cuadros y tablas.
-\usepackage{float}      
+\usepackage{float}
+
 % Paquete que permite la construcción de tablas
 % que abarquen mas de una página.
-\usepackage{longtable}       
+\usepackage{longtable}
+
 % Paquete que ofrece el soporte de citación 
 % estilo APA.
-\usepackage{apacite} 
+\usepackage{apacite}
+
 % Paquetes para el uso de fórmulas matemáticas.
 \usepackage{amsmath, amsthm, amssymb}
+
 % Paquete para la inclusión de Anexos
 \usepackage{appendix}
+
 % Paquete para la graficación
 \usepackage{tikz}
 \usetikzlibrary{shapes,arrows}
-% Paquete para la incrustación de datos personales
+
+% Paquete para el espaciado automático entre párrafos
+% ya no es necesario el "//"
+\usepackage{parskip}
+
+% Paquete para espaciar el titulo de las tablas 
+\usepackage{caption}
+
+% Paquete para eliminar los espacios en blanco 
+% entre titulos/subtitulos/etc.
+\usepackage[compact]{titlesec}
+
+% Paquete para cambiar el estilo de 
+% títulos de capítulos, secciones y 
+% subsecciones
+\usepackage[Lenny]{fncychap}
+
+% Paquete pora importar de forma anidada
+\usepackage{import}
+
+% Paquete "custom" para la incrustación de datos personales
 \usepackage{configs/docstyle}
 
 \begin{document}
@@ -38,24 +70,29 @@
     \include{caratula}
     
     \frontmatter
-    \include{capitulos/cap_0_dedicatoria}
-    \include{capitulos/cap_0_agradecimientos}
-    \tableofcontents
-    \listoffigures
-    \listoftables
+        \include{capitulos/cap_0_dedicatoria}
+        \include{capitulos/cap_0_agradecimientos}
+        \tableofcontents
+        \listoffigures
+        \listoftables
     
-    \mainmatter     
-    \include{capitulos/cap_1_ejemplos_de_uso}
-    
-    \backmatter
-    \bibliographystyle{apacite}
-    \bibliography{bibliografia}
+    \mainmatter
+        \include{capitulos/cap_1_ejemplos_de_uso}
+        % importar demás capítulos acá ...
+
+    {
+        \backmatter
+        \bibliographystyle{apacite}
+        \bibliography{bibliografia}
+    }
 
     \appendix
-    \clearpage
-    \addappheadtotoc
-    \appendixpage
-    \include{anexos/anexo_A}
-    \include{anexos/anexo_B}
+    \begin{appendices}
+        \include{anexos/anexo_A}
+        \include{anexos/anexo_B}
+    \end{appendices}
+    % \clearpage
+    % \addappheadtotoc
+    % \appendixpage
     
 \end{document}

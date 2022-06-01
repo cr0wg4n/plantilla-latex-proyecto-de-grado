@@ -3,9 +3,17 @@
 \renewcommand{\BRetrievedFrom}[1]{Recuperado de }
 \renewcommand{\BRetrieved}[1]{}
 
+% Anexos Letras
 \renewcommand{\appendixname}{Anexos}
 \renewcommand{\appendixtocname}{Anexos}
 \renewcommand{\appendixpagename}{Anexos}
+
+% Indices renombrados
+\renewcommand{\listfigurename}{Índice de Figuras}
+\renewcommand{\listtablename}{Índice de Tablas}
+
+% References renombrado
+\renewcommand{\bibname}{Bibliografía}
 
 % Configuración de las formas en la graficación de diagramas de flujo
 \tikzstyle{decision} = [diamond, draw, fill=blue!15, 
@@ -15,3 +23,13 @@
 \tikzstyle{line} = [draw, -latex']
 \tikzstyle{cloud} = [draw, ellipse,fill=red!15, node distance=3cm,
   minimum height=2em]
+
+% Configurando parskip
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{5mm}
+
+% Configurando caption
+\captionsetup[table]{skip=4mm}
+
+% Estilo de orientación, tamaño y font family de chapter title
+\ChTitleVar{\huge\bfseries\sffamily\raggedleft}

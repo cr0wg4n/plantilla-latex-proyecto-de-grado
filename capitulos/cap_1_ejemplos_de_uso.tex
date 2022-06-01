@@ -1,8 +1,18 @@
 \chapter{Recursos LaTeX}
 
 \begin{center}
-    \textit{En que consiste este capítulo (Aquí).}
+    \textit{En que consiste este capítulo (opcional).}
 \end{center}
+
+Explicación e introducción al capítulo. 
+
+Blah blah blah blah blah blah blah blah blah blah blah
+blah blah blah blah blah blah blah blah blah blah blah 
+blah blah blah blah blah blah blah blah blah blah blah 
+blah blah blah blah blah blah.
+
+Blah blah blah blah blah blah blah blah blah blah blah 
+blah blah blah blah blah blah.
 
 \section{Fuente}
 
@@ -56,12 +66,12 @@
 \subsection*{Un autor}
 
 Como menciona \citeA{libro:ejemplo}, no es la única
-forma de citar.\\
+forma de citar.
 
 \subsection*{Varios autores}
 
 Como menciona \citeA{libro:ejemplo_varios_autores}, no es la única
-forma de citar.\\
+forma de citar.
 
 \subsection{Citación en la parte final}
 
@@ -82,12 +92,13 @@ blandit mauris citumoris totalis. \cite{libro:ejemplo_varios_autores}.
 \subsection{Citación con número de página}
 
 Como menciona \citeA[p.~5]{libro:ejemplo}, no es la única
-forma de citar.\\
+forma de citar.
 
 Duis fringilla tristique neque. Sed interdum libero ut metus.
 Pellentesque placerat. Nam rutrum augue a leo. Morbi sed 
 elit sit amet ante lobortis sollicitudin.Praesent blandit 
-blandit mauris citumoris totalis. \cite[p.~7-12]{libro:ejemplo_varios_autores}.
+blandit mauris citumoris totalis. 
+\cite[p.~7-12]{libro:ejemplo_varios_autores}.
 
 \subsection{Citación anexos}
 Duis fringilla tristique neque. Sed interdum libero ut metus.
@@ -97,9 +108,8 @@ Pellentesque placerat (Ver Anexo A).
 Referenciando a la figura \ref{fig:ejemplo}.
 
 \begin{figure}[H]
-    \begin{center}
-        \includegraphics[width=8cm]{img/capitulo_1/figura_ejemplo.png}
-    \end{center}
+    \centering
+    \includegraphics[width=8cm]{img/capitulo_1/figura_ejemplo.png}
     \caption{Explicación de la figura (Aquí)}
     Fuente: Adaptada de Apellido, N. (2000) \textit{Nombre del libro}.
     Editorial o universidad que lo publicó.
@@ -107,14 +117,16 @@ Referenciando a la figura \ref{fig:ejemplo}.
 \end{figure}
 
 \section{Tablas}
+Sección en la que se detallan el uso de tablas.
 
 \subsection{Corto}
-Referenciando a la tabla \ref{tabla:ejemplo}.\\
+Con respecto a la tabla \ref{tabla:ejemplo}, se tiene la siguiente 
+información.
 
 \begin{table}[H]
-    \caption{Título de la tabla}
-    \label{tabla:ejemplo}
     \begin{center}
+        \caption{Título de la tabla}
+        \label{tabla:ejemplo}
         \begin{tabular}{c|c|c|c|}
             \cline{2-4}
             & \textbf{Columna 1} & \textbf{Columna 2} & \textbf{Columna 3} \\ \hline
@@ -123,6 +135,7 @@ Referenciando a la tabla \ref{tabla:ejemplo}.\\
             \multicolumn{1}{|c|}{\textbf{Fila 3}} & item               & item               & item               \\ \hline
         \end{tabular}
     \end{center}
+    \vspace{4mm}
     Nota. Extraída de Apellido, N. (2000) \textit{Nombre del libro}.
     Editorial o universidad que lo publicó.
 \end{table}
@@ -134,7 +147,7 @@ elit sit amet ante lobortis sollicitudin.Praesent blandit
 blandit mauris. Praesent lectus tellus, aliquet aliquam,
 luctus a, egestas a, turpis.Mauris lacinia lorem sit amet
 ipsum. Nunc quis urna dictum turpis accumsan semper. Tabla
-\ref{tabla:tabla_largo_ejemplo}.\\
+\ref{tabla:tabla_largo_ejemplo}.
 
 \begin{longtable}{p{2cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
     \caption{Titulo de tabla multipágina} \label{tabla:tabla_largo_ejemplo} \\
@@ -172,12 +185,16 @@ ipsum. Nunc quis urna dictum turpis accumsan semper. Tabla
 \section{Fórmulas matemáticas}
 
 \section*{Simple}
+Referenciando fórmula en parrafo, fórmula \ref{eq:euler}.
+
 \begin{equation}
     e^{i\pi} + 1 = 0
     \label{eq:euler}
 \end{equation}
 
 \section*{Matrices}
+Referenciando fórmula en parrafo, fórmula \ref{eq:matriz}.
+
 \begin{equation}
     \left[
     \begin{matrix}
@@ -190,12 +207,19 @@ ipsum. Nunc quis urna dictum turpis accumsan semper. Tabla
 \end{equation}
 
 \section*{Límites}
+Referenciando fórmula en parrafo, fórmula \ref{eq:limites}.
+
 \begin{equation}
     \lim_{x\rightarrow\infty}\frac{3+x}{x^2} 
     \label{eq:limites}
 \end{equation}
 
 \section{Diagramas de flujo}
+A pesar de que en {\LaTeX} es posible realizar geniales diagramas de flujo,
+a la larga es complicado mantenerlos, en ese sentido,
+es recomendable utilizar alternativas como \url{https://app.diagrams.net/}
+o mas conocido como draw.io, tiene instaladores para todos los sistemas 
+operativos. 
 
 \begin{center}
     \begin{tikzpicture}[node distance = 3cm, auto]
