@@ -3,7 +3,10 @@
 Plantilla de libre uso para la documentación de 
 proyectos de grado bajo normas APA.
 
-[Enlace](https://cr0wg4n.medium.com/documenta-tu-proyecto-de-grado-con-latex-sin-morir-en-el-intento-ft-normas-apa-15bf50a2ee01) al artículo de este repositorio.
+### Enlaces
+* [Post especial sobre este repositorio](https://cr0wg4n.medium.com/documenta-tu-proyecto-de-grado-con-latex-sin-morir-en-el-intento-ft-normas-apa-15bf50a2ee01)
+* [Diapositivas "Taller de LaTeX 2022"](https://slides.com/cr0wg4n/taller-de-latex/edit)
+
 
 ## Estructura
 
