@@ -33,3 +33,58 @@
 
 % Estilo de orientación, tamaño y font family de chapter title
 \ChTitleVar{\huge\bfseries\sffamily\raggedleft}
+
+% Configurando el espaciado entre "itemize/enumerate items"
+\setlist[itemize]{noitemsep, topsep=3mm}
+\setlist[enumerate]{noitemsep, topsep=3mm}
+
+% Tamaño y espaciado de section/subsection/subsubsection/paragraph
+\titleformat*{\section}{\Large\bfseries}
+\titleformat*{\subsection}{\large\bfseries}
+\titleformat*{\subsubsection}{\large\bfseries}
+\titleformat{\paragraph}{\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+
+% Para agregar Bookmarks de imágenes y tablas
+
+\makeatletter
+  \newcommand{\listoffiguresbookmarks}{%
+    \pdfbookmark[0]{\listfigurename}{listoffiguresbookmark}
+    \bookmarksetup{level=1}
+    \@starttoc{lofb}
+  }
+  \newcommand{\listoftablesbookmarks}{%
+    \pdfbookmark[0]{\listtablename}{listoftablesbookmark}
+    \bookmarksetup{level=1}
+    \@starttoc{lotb}
+  }
+\makeatother
+
+\makeatletter
+  \pretocmd\endfigure{%
+  \addtocontents{lofb}{%
+    \protect{%
+      \bookmark[
+      rellevel=1,
+      keeplevel,
+      dest=\@currentHref,
+      ]{Figura \thefigure: \@currentlabelname}}}%
+  }{}{\errmessage{Patching \noexpand\endfigure failed}}
+  
+  \pretocmd\endtable{%
+  \addtocontents{lotb}{%
+    \protect{%
+      \bookmark[
+      rellevel=1,
+      keeplevel,
+      dest=\@currentHref,
+      ]{Tabla \thetable: \@currentlabelname}}}%
+  }{}{\errmessage{Patching \noexpand\endtable failed}}
+\makeatother
+
+\AtEndDocument{%
+  \listoffiguresbookmarks
+  \listoftablesbookmarks
+}

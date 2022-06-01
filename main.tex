@@ -10,7 +10,10 @@
 \usepackage{graphicx}
 
 % Paquete para la referencias links y marcadores en el menu del pdf
-\usepackage{hyperref}
+\usepackage[bookmarksnumbered,bookmarksopen=false]{hyperref}
+% Paquete para agregar "custom" bookmarks
+\usepackage{bookmark}
+
 
 % Márgenes de la hoja
 \usepackage[top=2cm,bottom=2cm,left=3cm,right=2cm]{geometry}
@@ -61,6 +64,12 @@
 
 % Paquete pora importar de forma anidada
 \usepackage{import}
+
+% Paquete que simplifica la notación de unidades físicas medidas etc 
+\usepackage{siunitx}
+
+% Paquete para la configuración de listas
+\usepackage{enumitem}
 
 % Paquete "custom" para la incrustación de datos personales
 \usepackage{configs/docstyle}

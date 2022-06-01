@@ -17,10 +17,8 @@ blah blah blah blah blah blah.
 \section{Fuente}
 
 \subsection{Familia}
-{\ttfamily typewriter (máquina de escribir)}
-
-{\sffamily sans serif}
-
+{\ttfamily typewriter (máquina de escribir)}\\
+{\sffamily sans serif}\\
 {\rmfamily roman}
 
 \subsection{Forma}
@@ -31,16 +29,16 @@ blah blah blah blah blah blah.
 \textsc{texto en mayúsculas pequeñas}
 
 \subsection{Tamaño}
-{\tiny texto de prueba}\\
-{\scriptsize texto de prueba}\\
-{\footnotesize texto de prueba}\\
-{\small texto de prueba}\\
-{\normalsize texto de prueba}\\
-{\large texto de prueba}\\
-{\Large texto de prueba}\\
-{\LARGE texto de prueba}\\
-{\huge texto de prueba}\\
-{\Huge texto de prueba}
+{\tiny  tiny - texto de prueba}\\
+{\scriptsize  scriptsize - texto de prueba}\\
+{\footnotesize  footnotesize - texto de prueba}\\
+{\small  small - texto de prueba}\\
+{\normalsize  normalsize - texto de prueba}\\
+{\large  large - texto de prueba}\\
+{\Large  Large - texto de prueba}\\
+{\LARGE  LARGE - texto de prueba}\\
+{\huge  huge - texto de prueba}\\
+{\Huge  Huge - texto de prueba}
 
 \section{Listado}
 
@@ -107,7 +105,7 @@ Pellentesque placerat (Ver Anexo A).
 \section{Figuras}
 Referenciando a la figura \ref{fig:ejemplo}.
 
-\begin{figure}[H]
+\begin{figure}[!h]
     \centering
     \includegraphics[width=8cm]{img/capitulo_1/figura_ejemplo.png}
     \caption{Explicación de la figura (Aquí)}
@@ -123,7 +121,7 @@ Sección en la que se detallan el uso de tablas.
 Con respecto a la tabla \ref{tabla:ejemplo}, se tiene la siguiente 
 información.
 
-\begin{table}[H]
+\begin{table}[!h]
     \begin{center}
         \caption{Título de la tabla}
         \label{tabla:ejemplo}
@@ -249,3 +247,14 @@ operativos.
         \path [line] (search) -- (test);
     \end{tikzpicture}
 \end{center}
+
+\section{Unidades}
+
+Peso \si{69 \kilogram}.
+Mido \si{2 \metre}.
+Camino \si{5 \second} por día.
+Mi calle tiene \ang{10} de diferencia con otra.
+\ang{10;8;2}.
+
+Para más unidades consultar la documentación del paquete 
+\textbf{siunitx}.
