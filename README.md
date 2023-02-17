@@ -8,7 +8,10 @@ proyectos de grado bajo normas APA.
 * [Post especial sobre este repositorio](https://cr0wg4n.medium.com/documenta-tu-proyecto-de-grado-con-latex-sin-morir-en-el-intento-ft-normas-apa-15bf50a2ee01)
 
 ## Requerimientos
-        ⚠️ Es importante tener instalados todos los requerimientos
+> ⚠️ Es importante tener instalados todos los requerimientos.
+
+> ⚠️ Si utilizas **MiKTeX** no olvides actualizarlo.
+
 * Python 3 o mayor
 * Pygments (paquete en pip). Ejemplo de instalación: `pip install Pygments` o `pip3 install Pygments` 
 * Preparar el ambiente ([tutorial](https://cr0wg4n.medium.com/latex-y-visual-studio-code-gu%C3%ADa-de-instalaci%C3%B3n-ca8bef3935e3)).
@@ -42,11 +45,11 @@ El documento ```.pdf``` resultado de la compilación es [main.pdf](https://githu
 
 ## Vista Previa 
 
-![](https://github.com/cr0wg4n/plantilla-latex-proyecto-de-grado/blob/master/img/preview.png)
+![](https://github.com/cr0wg4n/plantilla-latex-proyecto-de-grado/blob/master/img/preview.jpg)
 
 ## Reducción de tamaño de archivo pdf
 
-En muchas ocasiones el peso del archivo logra alcanzar un gran tamaño, para ello puedes correr el siguiente comando, pero antes necesitas 
+En muchas ocasiones el archivo alcanza logra un peso demasiado alto, eso dependerá de cuantas imágenes estas empleando en el documento, para ello puedes correr el siguiente comando, pero antes necesitas 
 instalar [ghostscript](https://www.ghostscript.com/), te aconsejo correr el comando en una terminal con bash:
 
 ```bash
