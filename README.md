@@ -4,8 +4,8 @@ Plantilla de libre uso para la documentación de
 proyectos de grado bajo normas APA.
 
 ## Enlaces Importantes
-* [Diapositivas "Taller de LaTeX 2022"](https://slides.com/cr0wg4n/taller-de-latex/edit)
-* [Post especial sobre este repositorio](https://cr0wg4n.medium.com/documenta-tu-proyecto-de-grado-con-latex-sin-morir-en-el-intento-ft-normas-apa-15bf50a2ee01)
+* [Diapos y guia "Taller de LaTeX 2022", un completo recurso para comprender los comandos básicos de LaTeX](https://slides.com/cr0wg4n/taller-de-latex/edit)
+* [Post/Artículo especial sobre este repositorio](https://cr0wg4n.medium.com/documenta-tu-proyecto-de-grado-con-latex-sin-morir-en-el-intento-ft-normas-apa-15bf50a2ee01)
 
 ## Requerimientos
 > ⚠️ Es importante tener instalados todos los requerimientos.
