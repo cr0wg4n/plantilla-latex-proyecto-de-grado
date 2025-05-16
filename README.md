@@ -3,8 +3,23 @@
 Plantilla de libre uso para la documentación de tesis o 
 proyectos de grado bajo normas APA.
 
+**No te preocupes por el formato o la belleza de tu documento, preocupate por crear, experimentar y documentar tu proyecto/tesis debidamente.**
+
 ![](https://github.com/cr0wg4n/plantilla-latex-proyecto-de-grado/blob/master/img/preview.png)
 
+Características:
+* Carátula parametrizada
+* Autogeneración de índice, índice de tablas e imágenes
+* Márgenes con dimensiones pre-establecidas y configurables
+* Autonumeración de imágenes y tablas
+* Enlaces rápidos a secciones, imágenes, tablas, código y otros
+* Gestión y referenciación automática en formato APA
+* Autonumerado de páginas 
+* Código con highlighting y formateado automático 
+* Diagramas de flujo
+* Ejemplos de uso
+
+> Si no se ajusta a tus necesidades es facilmente ajustable
 
 ## 🔗 Enlaces relacionados
 * [Diapositivas y guia "Taller de LaTeX 2022"](https://slides.com/cr0wg4n/taller-de-latex/edit), una guia útil para los comandos y sintaxis básicas de LaTeX.
