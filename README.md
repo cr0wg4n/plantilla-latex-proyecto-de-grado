@@ -9,7 +9,7 @@ proyectos de grado bajo normas APA.
 
 Características:
 * Carátula parametrizada
-* Autogeneración de índice, índice de tablas e imágenes
+* Autogeneración de índice principal, tablas e imágenes
 * Márgenes con dimensiones pre-establecidas y configurables
 * Autonumeración de imágenes y tablas
 * Enlaces rápidos a secciones, imágenes, tablas, código y otros
