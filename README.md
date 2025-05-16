@@ -1,4 +1,4 @@
-# Plantilla LaTeX para Tesis o Proyecto de Grado (incluyendo Normas APA)
+# Plantilla LaTeX para Tesis o Proyecto de Grado (incluye Normas APA)
 
 Plantilla de libre uso para la documentación de tesis o 
 proyectos de grado bajo normas APA.
@@ -13,7 +13,8 @@ proyectos de grado bajo normas APA.
 ## ☑️ Requerimientos
 > ⚠️ Es muy importante tener instalados todos los requerimientos, si usas [MiKTeX](https://miktex.org/) no olvides actualizarlo.
 
-* Prepara el ambiente siguiendo este [articulo web para WINDOWS](https://cr0wg4n.medium.com/latex-y-visual-studio-code-gu%C3%ADa-de-instalaci%C3%B3n-ca8bef3935e3) o ve este video de [YouTube](https://www.youtube.com/watch?v=KZbciURUYb4).
+* Prepara tu entorno siguiendo este [articulo web para WINDOWS](https://cr0wg4n.medium.com/latex-y-visual-studio-code-gu%C3%ADa-de-instalaci%C3%B3n-ca8bef3935e3) o ve este video de [YouTube](https://www.youtube.com/watch?v=KZbciURUYb4).
+* No importa si usas Linux o Windows necesitaras Python 3 o mayor instalado, una vez configurado, instala el paquete [Pygments](https://pypi.org/project/Pygments/): `pip install Pygments`
 * Si usas LINUX el camino es muy similar, necesitaras instalar Perl (`sudo apt install perl`), [MiKTeX](https://miktex.org/) y [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) para [VSCode](https://code.visualstudio.com/).
 
 ## 🔀 Estructura de archivos
